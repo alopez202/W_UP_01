@@ -78,8 +78,14 @@ the mean-value of pushups that the players on the line did 17.12500 and the play
 
 <!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+t.test(pushups~position,data=mydata)
+```
+The p-value is 0.000009421. the p-value is so small that this result is unlikely to occurred by chance.
+
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
+The original research question was is there difference between the number of pushups between the line players and skill players. Both the boxplot and the numerical summary show that skill players can do more pushups the the line players. We can conclude that the skill players can do more push ups than the line players and you can conclude this because the p-value is so small.
