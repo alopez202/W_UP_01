@@ -50,9 +50,7 @@ basicCN <- ggplot(mydata,aes(x=position,y=pushups))
 ```
 ## Now add in boxplot
 
-```{r}
-basicCN + geom_boxplot()
-```
+
   
   
 ### get fancy  
@@ -61,12 +59,20 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="line player vs. skill ")
 ```
 
-
+this boxplot shows the results of the football players pushups and drills.The results are skills players can do more pushups than the line players.This shows that 75% of the skills player do more than any of line players. You could see this by the positions of the box displays.
 
  
 ### Numerical Descriptive Results
 
+
+
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(pushups~position,data=mydata)
+```
+
+the mean-value of pushups that the players on the line did 17.12500 and the players for skill did 49.72727. This means that average number of pushups skill players did was 3x as many as line players.
 
 ## Inferential Results
 
